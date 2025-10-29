@@ -1,5 +1,5 @@
 import React from 'react'
-import './index.css'
+// import './index.css'
 import { useState } from 'react'
 
 function App() {
@@ -30,20 +30,20 @@ function App() {
     <form onSubmit={handleSubmit}>
     <div className='formdiv'>
 
-      <label htmlFor="">UserName</label>
-      <input type="text" placeholder='enter your username'
+      <label htmlFor="username">UserName</label>
+      <input id="username" type="text" placeholder='enter your username'
       name='name'
       value={formdata.name}
       onChange={handlechange}
       />
-      <label htmlFor="">Password</label>
-      <input type="text" placeholder='enter your password'
+      <label htmlFor="password">Password</label>
+      <input id='password' type="text" placeholder='enter your password'
       name='password'
       value={formdata.password} 
       onChange={handlechange}
       />
-      <label htmlFor="">Age</label>
-      <input type="text" placeholder='enter your age'
+      <label htmlFor="age">Age</label>
+      <input id='age' type="text" placeholder='enter your age'
       name='age'
       value={formdata.age}
       onChange={handlechange}

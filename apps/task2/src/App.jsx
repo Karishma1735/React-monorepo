@@ -1,4 +1,4 @@
-import "./index.css";
+// import "./index.css";
 import { useState } from "react";
 import { useRef } from "react";
 
@@ -25,8 +25,11 @@ export default function App() {
   return (
     <div className="container">
       <h1>Timer</h1>
-      <span> {Math.floor(timer/60)} min </span>
-      <span>{Math.floor(timer%60)} seconds</span>
+      {/* <span> {Math.floor(timer/60)} min </span> */}
+      {/* <span>{Math.floor(timer%60)} seconds</span> */}
+
+      <span>{Math.floor(timer / 60)} min {Math.floor(timer % 60)} seconds</span>
+
       <div>
         <button onClick={startTimer} >Start</button>
         <button onClick={stopTimer}>Stop</button>
