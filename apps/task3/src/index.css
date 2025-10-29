@@ -1,0 +1,13 @@
+.App {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#button {
+  background-color: blueviolet;
+  padding: 3px;
+  border-radius: 3px;
+  outline: none;
+}

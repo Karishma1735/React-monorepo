@@ -1,0 +1,14 @@
+.formdiv{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: auto;
+  padding: 10px;
+  gap: 5px;
+}
+.button{
+  padding: 20px;
+  background-color: aquamarine;
+  border-radius: 3px;
+
+}
