@@ -23,7 +23,7 @@ function App() {
       <h1>No. of Clicks until timer expires</h1>
       <div>
         <div>{count}</div>
-        <div>Time Left: {timer} </div>
+        <div data-testid='timer'>Time Left: {timer} </div>
       </div>
       {timer > 0 && (
         <button
