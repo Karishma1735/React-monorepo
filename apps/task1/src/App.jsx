@@ -26,7 +26,7 @@ function App() {
 
   }
   return (
-    <div>
+    <div className='maindiv'>
     <form onSubmit={handleSubmit}>
     <div className='formdiv'>
 
@@ -53,18 +53,17 @@ function App() {
     </div>
     </form>
 
-  
-    {showdata && (<div>
-
-      <h5>Request sent to db with below request data</h5>
-      <p>Username :{formdata.name}</p>
-      <p>Password : {formdata.password}</p>
-      <p>Age : {formdata.age}</p>
-
-
-
-      
-    </div>)}
+ 
+      {showdata && (
+        <div className='resultcontainer'> 
+          <h5>Request sent to db with below request data</h5>
+          <ul>
+            <li>Username : {formdata.name}</li>
+            <li>Password : {formdata.password}</li>
+            <li>Age : {formdata.age}</li>
+          </ul>
+        </div>
+      )}
 
     </div>
 

@@ -3,13 +3,29 @@ import { useState } from 'react';
 
 function App() {
     const [val , setVal]=useState(0);
-    const valueHandler=(e)=>{
-        let value=e.target.value;
-        if(value>100) 
-          alert("Enter less than 100");
-        if(value<0) alert("Enter greater than 0");
-        else setVal(value);
+  
+  const valueHandler = (e) => {
+    let value = e.target.value;
+
+    if (value === '') {
+      setVal('');
+      return;
     }
+
+    if (value > 100) {
+      alert("Enter less than 100");
+      setVal('');
+      return;
+    }
+
+    if (value < 0) {
+      alert("Enter greater than 0");
+      setVal('');
+      return;
+    }
+
+    setVal(value);
+  };
   return (
     <>
       <div className="App">
@@ -17,7 +33,7 @@ function App() {
         <div
           className="progress "
           style={{ width: `${val}%` }}
-        ><p>`${val}</p></div>
+        ><p >`${val}</p></div>
         <form>
           <label htmlFor="progress-bar">Input Percentage:</label>
           <input type="number" id='progress-bar' onChange={(e)=>{valueHandler(e)}} />

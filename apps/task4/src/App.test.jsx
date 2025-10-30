@@ -8,14 +8,10 @@ test("testing todo list", ()=>{
     const cityPlaceholder =screen.getByPlaceholderText(/add city/i)
     fireEvent.change(cityPlaceholder , {target :{value:"Indore"}})
   
-    // fireEvent.click(screen.getByRole('button' , {name:/add/i}))
-    //  fireEvent.change(cityPlaceholder , {target :{value:"Mumbai"}})
-
     const addbutton = screen.getByRole('button' , {name:/add/i})
     fireEvent.click(addbutton)
     
 
-    // const cities = screen.getByRole('listitem')
 
     const deleteButton = screen.getByText('x')
   fireEvent.click(deleteButton)

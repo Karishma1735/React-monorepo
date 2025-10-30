@@ -19,16 +19,17 @@ test("Verifying form data" , ()=>{
     fireEvent.change(agelabel,{target:{value:"20"}})
     expect(agelabel).toHaveValue("20")
 
-})
 
-test("submit formdata" , ()=>{
-    render(<App/>)
+  fireEvent.click(screen.getByRole('button', { name: /submit/i }));
+
 
   fireEvent.click(screen.getByRole('button', { name: /submit/i }));
 
   expect(screen.getByText(/Request sent to db with below request data/i)).toBeInTheDocument();
-  expect(screen.getByText(/username : Karishma/i)).toBeInTheDocument();
-  expect(screen.getByText(/password : 1234567/i)).toBeInTheDocument();
-  expect(screen.getByText(/age : 20/i)).toBeInTheDocument();
+
+  const details = screen.getAllByRole('listitem');
+  expect(details[0]).toHaveTextContent('Username : Karishma');
+  expect(details[1]).toHaveTextContent('Password : 1234567');
+  expect(details[2]).toHaveTextContent('Age : 20');
 
 })
